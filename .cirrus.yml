@@ -20,8 +20,10 @@ task:
     gclient sync
   git_branch_switch_script: |
     cd $ENGINE_PATH/src/flutter
-    git branch
+    git remote -v
+    git checkout -b future_hot_update_on_flutter_v1.0.0 origin/future_hot_update_on_flutter_v1.0.0
     # git checkout future_hot_update_on_flutter_v1.0.0
+    git branch
     git status
 
   # compile_host_script: |
